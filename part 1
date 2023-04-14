@@ -1,0 +1,423 @@
+/*
+let js = 'amazing';
+console.log(40 + 8 + 23 - 10);
+
+console.log('Jonas');
+console.log(23);
+
+let firstName = 'Fred';
+
+console.log(firstName);
+console.log(firstName);
+console.log(firstName);
+
+// variable name conventions
+let jonas_matilda = 'JM';
+let $function = 27;
+
+let person = 'jonas';
+let PI = 3.1415;
+
+let myFirstJob = 'Coder';
+let myCurrentJob = 'Teacher';
+
+let job1 = 'programmer';
+let job2 = 'teacher';
+
+console.log(myFirstJob);
+
+let javascriptIsFun = true;
+console.log(javascriptIsFun);
+
+console.log(typeof true);
+console.log(typeof javascriptIsFun);
+console.log(typeof 23);
+console.log(typeof 'Jonas');
+
+javascriptIsFun = 'YES!';
+console.log(typeof javascriptIsFun);
+
+let year;
+console.log(year);
+console.log(typeof year);
+
+year = 1991;
+console.log(typeof year);
+
+// jasvascripet error (returns object):
+console.log(typeof null);
+
+
+let age = 30;
+age = 31;
+
+const birthYear = 1991;
+
+// these two should be avoided
+var job = 'programmer';
+job = 'teacher';
+
+lastName = 'Varamezov';
+console.log(lastName);
+
+
+//Math operators
+const currentYear = 2037;
+const ageJonas = currentYear - 1991;
+const ageSarah = currentYear - 2018;
+console.log(ageJonas, ageSarah);
+
+console.log(ageJonas * 2, ageJonas / 10, 2 ** 3); // 2 ** 3 means 2^3 = 2*2*2
+
+
+const firstName = 'Jonas';
+const lastName = 'Varamezov';
+console.log(firstName + ' ' + lastName); // we use + to concatinate
+
+
+// Assignment operatots
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1
+x--; // x = x - 1
+console.log(x);
+
+// Comparison operators
+console.log(ageJonas > ageSarah); // We ask the operator whether ageJonas is > than ageSarah (we can use it for >, <, >=, <=)
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+
+console.log(currentYear - 1991 > currentYear - 2018);
+
+
+const currentYear = 2037;
+const ageJonas = currentYear - 1991;
+const ageSarah = currentYear - 2018;
+
+console.log(currentYear - 1991 > currentYear - 2018);
+
+//console.log(25 - 10 - 5);
+
+let x, y;
+x = y = 25 - 10 - 5; // x = y = 10, x = 10
+console.log(x, y);
+
+const averageAge = (ageJonas + ageSarah) / 2;
+console.log(ageJonas, ageSarah, averageAge)
+
+//coding challenge:
+// const weightMark = 78;
+// const heightMark = 1.69;
+// const weightJohn = 92;
+// const heightJohn = 1.95;
+const weightMark = 95;
+const heightMark = 1.88;
+const weightJohn = 85;
+const heightJohn = 1.76;
+
+const BMIMark = weightMark / (heightMark * heightMark);
+const BMIJohn = weightJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+
+const markHigherBMI = BMIMark > BMIJohn;
+console.log(markHigherBMI);
+
+
+// string
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const currentYear = 2030;
+
+const jonas = "I'm " + firstName + ', a ' + (currentYear - birthYear) + ' years old ' + job + '!';
+console.log(jonas);
+
+
+//template literals (we use ``) (better and easier than the previous way):
+const jonasNew = `I'm ${firstName}, a ${currentYear - birthYear} years old ${job}!`;
+console.log(jonasNew);
+
+console.log(`Just a regular string...`);
+
+// multi-line string:
+console.log('String with \n\
+multiple \n\
+lines');
+
+//multi-line strng using template literals
+console.log(`String
+multiple
+lines`);
+
+
+//taking decisions with the code (if/else):
+const age = 15;
+
+if (age >= 18) {
+    console.log('Sarah can start driving license👀') // emoji is windows + "."
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`)
+}
+
+const birthYear = 2012;
+let century;
+
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century);
+
+//coding challenge:
+const weightMark = 78;
+const heightMark = 1.69;
+const weightJohn = 92;
+const heightJohn = 1.95;
+//const weightMark = 95;
+//const heightMark = 1.88;
+//const weightJohn = 85;
+//const heightJohn = 1.76;
+
+const BMIMark = weightMark / (heightMark * heightMark);
+const BMIJohn = weightJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+let higherBMI
+if (BMIMark > BMIJohn) {
+    console.log("Mark's BMI is higher than John's");
+    const higherBMI = `Marks BMI (${BMIMark}) is higher than Johns BMI (${BMIJohn})`;
+    console.log(higherBMI);
+} else {
+    console.log("John's BMI is higher than Mark's")
+    const higherBMI = `Johns BMI (${BMIJohn}) is higher than Marks BMI (${BMIMark})`;
+    console.log(higherBMI);
+}
+
+
+
+//type conversion (manually convert from one type to another):
+const inputYear = '1991';
+console.log(Number(inputYear)); //we use 'number' function to convert a variable to a number, however initial variable is still a string (not a number)
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas'));  //we cannot convert words into numbers (we will get NaN (not a number))
+console.log(typeof NaN); //NaN is an invalid number
+
+console.log(String(23), 23); // we convert numbers to string by using "string"
+
+//type coercion (JS converst one of the values to the other if they are different)
+console.log('I am ' + 23 + ' years old');
+console.log('I am ' + '23' + ' years old');
+console.log('23' - '10' - 3); // if we use + it will concatinate because it will convert the 3 into a string
+console.log('23' * '2');
+
+let n = '1' + 1; // converts the first '1' to string => 11
+n = n - 1; //11 - 1 = 10
+console.log(n);
+
+
+
+//truthy and falsy (not false but will become false when we turn them into boolean) values
+//there are 5 falsy values: 0, '', undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas')); //string is true
+console.log(Boolean({})); //empty object is also true
+console.log(Boolean('')); //'' is false
+
+const money = 0; //in this situation 0 is false => we get the else value
+if (money) {
+    console.log("Don't spend it all");
+} else {
+    console.log('You should get a job');
+}
+
+let height; //height is undefined => when converted into boolean we get the else value
+if (height) {
+    console.log('Yay');
+} else {
+    console.log('Noo');
+}
+
+
+
+
+//== vs ===
+const age = 18; //this is an assignment operator (assigns value)
+if (age === 18) console.log('You just became an adult (strict)'); // === checks if value is EXACTLY 18
+// == does type coercion
+if (age == 18) console.log('You just became an adult (loose)'); //if the variable is string we use == (uses type coercion)
+
+const favourite = Number(prompt("What is your favourite number")); //prompt puts a window alert
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) { //'23'== 23; 23 === 23
+    console.log('Cool! 23 is an amazing number');
+} else if (favourite === 7) {
+    console.log('7 is also a cool number');
+} else {
+    console.log('Number is neither 7 or 23');
+}
+
+if (favourite !== 23) console.log('why not 23'); // !== means not equal
+
+
+
+//Logical operators
+const hasDriversLicense = true; // A
+const hasGoodVision = true // B
+
+console.log(hasDriversLicense && hasGoodVision); // && === and
+console.log(hasDriversLicense || hasGoodVision); // || === or
+console.log(!hasDriversLicense); // if we use ! before the variable it changes to the opposite (from true to false)
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (hasDriversLicense && hasGoodVision) {
+//     console.log('Sarah is able to drive');
+// } else {
+//     console.log('Someone else should drive');
+// }
+
+const isTired = false;  // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive');
+} else {
+    console.log('Someone else should drive');
+}
+
+
+//coding challenge:
+// const dolphins = (96 + 108 + 89) / 3;
+// const koalas = (88 + 91 + 110) / 3;
+// console.log(dolphins, koalas)
+
+// const dolphinsFirst = 96;
+// const dolphinsSecond = 108;
+// const dolphinsThird = 89;
+// const koalasFirst = 88;
+// const koalasSecond = 91;
+// const koalasThird = 110;
+
+// const dolphinsFirst = 97;
+// const dolphinsSecond = 112;
+// const dolphinsThird = 101;
+// const koalasFirst = 109;
+// const koalasSecond = 95;
+// const koalasThird = 123;
+
+const dolphinsFirst = 97;
+const dolphinsSecond = 112;
+const dolphinsThird = 101;
+const koalasFirst = 109;
+const koalasSecond = 95;
+const koalasThird = 106;
+
+const averageDolphins = (dolphinsFirst + dolphinsSecond + dolphinsThird) / 3;
+const averageKoalas = (koalasFirst + koalasSecond + koalasThird) / 3;
+console.log(averageDolphins, averageKoalas);
+
+// 1&2:
+if (averageDolphins > averageKoalas) console.log('Dolphins have won');
+if (averageDolphins < averageKoalas) console.log('Koalas have won');
+if (averageDolphins === averageKoalas) console.log('It is a draw');
+
+//bonus 1:
+if (averageDolphins > averageKoalas && averageDolphins >= 100) console.log('dolphins have won');
+if (averageDolphins < averageKoalas && averageKoalas >= 100) console.log('koalas have won');
+
+// bonus 2:
+if (averageDolphins === averageKoalas && averageDolphins >= 100 && averageKoalas >= 100) {
+    console.log('It is a draw');
+} else console.log('Nobody wins the trophy');
+
+
+
+//Switch statement (complicated if/else):
+
+const day = 'friday';
+
+switch (day) {
+    case 'monday': // day === 'monday'
+        console.log('Plan my course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples');
+        break;
+    case 'friday':
+        console.log('record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('enjoy the weekend');
+        break;
+    default:
+        console.log('not a valid day');
+}
+
+if (day === 'monday') {
+    console.log('Plan my course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+    console.log('prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Write code examples');
+} else if (day === 'friday') {
+    console.log('record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('enjoy the weekend');
+} else console.log('not a valid day');
+
+
+
+// Stements and expressions:
+
+3 + 4 // expression because it produces value 
+1991 // also an expression because it produces value
+true && false && !false //also an expression 
+
+if (23 > 10) { // statement (does not produce value)
+    const str = '23 is bigger'; // expression (produces value)
+}
+
+
+
+// The conditional operator:
+const age = 17;
+// age >= 18 ? console.log('I like to drink wine') :
+//     console.log('I like to drink water');
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+    drink2 = 'wine';
+} else drink2 = 'water';
+
+console.log(drink2);
+
+console.log(`i like to drink ${age >= 18 ? 'wine' : 'water'}`); // will be used a lot 
+
+
+
+
+
+// coding challenge #4:
+const bill = 275;
+const tip = bill > 50 && bill < 300 ? 0.15 : 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip * bill}, and the total value was ${bill + (tip * bill)}`);
+
+*/
